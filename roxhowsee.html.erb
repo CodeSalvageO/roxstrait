@@ -1,0 +1,31 @@
+<h1>Messages</h1>
+
+<div class="meeting_list">
+  <h2>New Messages</h2>
+  <ul>
+    <% for meeting in @upcoming_meetings %>
+    <li>
+      <%= link_to h(meeting.name), :controller => "meetings",
+                                   :action     => "show",
+                                   :id         => meeting.id %>
+    </li>
+    <% end %>
+  </ul>
+  <p class="add">
+    <%= link_to "add meeting", :controller => "meetings",
+                               :action     => "new" %>
+  </p>
+</div>
+
+<div class="meeting_list">
+  <h2>Older Messages</h2>
+  <ul>
+    <% for meeting in @past_meetings %>
+    <li>
+      <%= link_to h(meeting.name), :controller => "meetings",
+                                   :action     => "show",
+                                   :id         => meeting.id %>
+    </li>
+    <% end %>
+  </ul>
+</div>
