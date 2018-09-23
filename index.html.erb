@@ -1,0 +1,19 @@
+<h1 style="font-family:courier;">Roxstrait</h1>
+
+<div class="meeting_list">
+  <h2 style="font-family:roboto;">Messages</h2>
+  <ul>
+    <% for meeting in @upcoming_meetings %>
+    <li><%=h meeting.name %> </li>
+    <% end %>
+  </ul>
+</div>
+
+<div class="meeting_list">
+  <h2>Older Messages</h2>
+  <ul>
+    <% for meeting in @past_meetings %>
+    <li><%=h meeting.name %> </li>
+    <% end %>
+  </ul>
+</div>
